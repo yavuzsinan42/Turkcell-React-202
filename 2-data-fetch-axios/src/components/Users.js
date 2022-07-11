@@ -3,6 +3,7 @@ import axios from "axios"
 
 export default function Users() {
     const [users, setUsers] = useState([]);
+    
     const [loading, setLoading] = useState(true)
     useEffect(()=>{
         axios("https://jsonplaceholder.typicode.com/users")
