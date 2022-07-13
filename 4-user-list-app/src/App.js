@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div><UserList setActiveUserId={setActiveUserId}/></div>
-      {activeUserId && <div><UserDetail activeUserId={activeUserId}/></div>}
+      {activeUserId && <div><UserDetail activeUserId={activeUserId} /></div>}
      
 
     </div>
