@@ -8,5 +8,8 @@ ul, li {
   display: flex;
   border-bottom: solid 1px #ccc;
   padding: 10px 0;
-  column-gap: 10px;
+  column-gap: 10px; 
+}
+.geri-btn{
+  cursor: pointer;
 }
