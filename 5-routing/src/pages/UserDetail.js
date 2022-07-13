@@ -1,14 +1,20 @@
 import React,{ useEffect, useState} from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 
 const UserDetail = () => {
     const {id} = useParams()
-    const [user, setUser]= useState(null)
+    const location = useLocation()
+    const [user, setUser]= useState(location.state)
+    console.log(location.state);
+    
     useEffect(()=> {
-        fetch("https://jsonplaceholder.typicode.com/users/"+id)
-        .then((res)=>res.json())
-        .then((data)=> setUser(data))
-    },[id])
+        if(!location.state){
+            fetch("https://jsonplaceholder.typicode.com/users/"+id)
+            .then((res)=>res.json())
+            .then((data)=> setUser(data))
+        }
+        
+    },[id,location.state])
     
   return (
     <div>
