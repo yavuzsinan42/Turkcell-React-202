@@ -13,3 +13,12 @@ ul, li {
 .geri-btn{
   cursor: pointer;
 }
+.form > div > label {
+  display: block;
+}
+.form > div  {
+  margin-bottom: 10px;
+}
+.form > div > input {
+  padding: 5px;
+}
