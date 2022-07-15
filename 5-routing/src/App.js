@@ -10,6 +10,7 @@ import Login from './pages/Auth/Login';
 import DashboardLayout from './layouts/Dashboard';
 import AuthLayout from './layouts/Auth';
 import Register from './pages/Auth/Register';
+import Error404 from './pages/Error404';
 function App() {
   return (
     <div >
@@ -27,7 +28,7 @@ function App() {
         <Route  path='register' element={<Register/>}/>
         </Route>
 
-
+        <Route path="*" element={<Error404/>}/>
       </Routes>
       </BrowserRouter>
     </div>
